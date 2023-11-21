@@ -13,6 +13,8 @@ CommandExecutor::CommandExecutor(Rover& rover, std::vector<char>& commands) : ro
             case 'R':
                 this->commands.push_back(new TurnRightCommand(rover));
                 break;
+            default:
+                std::cout << "Invalid Command: \"" << command << "\". Command Skipped.\n\n";
         }
     }
 }
